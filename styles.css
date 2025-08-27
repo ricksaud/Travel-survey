@@ -1,0 +1,181 @@
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Page look and feel */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80')
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #fff; /* light text for readability */
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Gradient overlay for readability */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 51, 0.65); /* darker blue overlay */
+  z-index: -1;
+}
+
+/* Container and header */
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #f0f9ff; /* very light blue/white for contrast */
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.description {
+  color: #dbeafe; /* pale sky blue */
+  font-weight: 500;
+  margin-top: 0;
+}
+
+/* Form card */
+#survey-form {
+  background: rgba(255, 255, 255, 0.95); /* brighter card for contrast */
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  border: 3px solid #60a5fa; /* medium blue border */
+}
+
+/* Vertical rhythm */
+.form-group {
+  margin-bottom: 16px;
+}
+
+/* Labels on top of controls */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1e3a8a; /* deep navy blue for labels */
+}
+
+/* Inputs, selects, textareas */
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 2px solid #93c5fd;
+  border-radius: 10px;
+  background: #eff6ff; /* very light blue */
+  color: #1e3a8a; /* dark blue text inside inputs */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.5);
+  outline: none;
+}
+
+/* Inline option rows (radio & checkbox) */
+.form-group > label > input[type='radio'],
+.form-group > label > input[type='checkbox'] {
+  margin: 0 0.5em 0 0;
+}
+
+/* Make the option labels inline-flex for neat rows */
+.form-group > label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  margin-right: 12px;
+  font-weight: 500;
+  color: #1e3a8a; /* dark blue for options */
+}
+
+/* Paragraphs inside groups */
+.form-group > p {
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  color: #1e40af; /* bright blue for question text */
+}
+
+/* Button styling */
+button,
+#submit {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6, #1e40af); /* gradient blue */
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
+}
+
+button:hover,
+#submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Focus */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.35);
+  border-color: #60a5fa;
+}
+
+/* Responsive small screens */
+@media (max-width: 480px) {
+  .container {
+    margin: 24px auto;
+  }
+  #survey-form {
+    padding: 16px;
+  }
+  .form-group > label {
+    margin-right: 8px;
+  }
+}
+
+/* Optional inline class */
+.inline {
+  margin: 0 0.5em 0 0;
+}

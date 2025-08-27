@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel & Adventure Survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Travel & Adventure Survey</h1>
+      <p id="description" class="description text-center">Find out which kind of travel adventure suits you best!</p>
+    </header>
+
+    <form id="survey-form">
+      <!-- Name -->
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name..." required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email..." required>
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label id="number-label" for="number">Age</label>
+        <input type="number" name="number" id="number" class="form-control" placeholder="Enter your age..." min="12" max="120" required>
+      </div>
+
+      <!-- Trip Type Radios -->
+      <div class="form-group">
+        <p>What's your favorite type of trip?</p>
+        <label><input id="beach" name="user-preference" value="beach" type="radio" class="input-radio" checked> Beach</label>
+        <label><input id="city" name="user-preference" value="city" type="radio" class="input-radio"> City</label>
+        <label><input id="mountains" name="user-preference" value="mountains" type="radio" class="input-radio"> Mountains</label>
+        <label><input id="adventures" name="user-preference" value="adventures" type="radio" class="input-radio"> Adventures</label>
+      </div>
+
+      <!-- Activities Checkboxes -->
+      <div class="form-group">
+        <p>What activities do you enjoy while traveling? (Select all that apply)</p>
+        <label><input type="checkbox" name="activities" value="hiking" class="input-checkbox"> Hiking</label>
+        <label><input type="checkbox" name="activities" value="sightseeing" class="input-checkbox"> Sightseeing</label>
+        <label><input type="checkbox" name="activities" value="food-tours" class="input-checkbox"> Food Tours</label>
+        <label><input type="checkbox" name="activities" value="relaxing" class="input-checkbox"> Relaxing on the beach</label>
+      </div>
+
+      <!-- Accommodation Checkboxes -->
+      <div class="form-group">
+        <p>What type of accommodation do you prefer while traveling? (Select all that apply)</p>
+        <label><input type="checkbox" name="accommodation" value="hotel" class="input-checkbox"> Hotel</label>
+        <label><input type="checkbox" name="accommodation" value="hostel" class="input-checkbox"> Hostel</label>
+        <label><input type="checkbox" name="accommodation" value="airbnb" class="input-checkbox"> Airbnb / Vacation Rental</label>
+        <label><input type="checkbox" name="accommodation" value="camping" class="input-checkbox"> Camping</label>
+      </div>
+
+      <!-- Preferred Season Dropdown -->
+      <div class="form-group">
+        <p>Which is your preferred season to travel?</p>
+        <select id="dropdown" name="seasons" class="form-control" required>
+          <option disabled selected value="">Select a season</option>
+          <option value="summer">Summer</option>
+          <option value="spring">Spring</option>
+          <option value="winter">Winter</option>
+          <option value="autumn">Autumn</option>
+        </select>
+      </div>
+
+      <!-- Travel Frequency Radios -->
+      <div class="form-group">
+        <p>How often do you usually travel?</p>
+        <label><input name="travel-frequency" value="once-a-year" type="radio" class="input-radio" checked> Once a year</label>
+        <label><input name="travel-frequency" value="few-times-a-year" type="radio" class="input-radio"> A few times a year</label>
+        <label><input name="travel-frequency" value="monthly" type="radio" class="input-radio"> Monthly</label>
+        <label><input name="travel-frequency" value="rarely" type="radio" class="input-radio"> Rarely</label>
+      </div>
+
+      <!-- Favorite Destination Text -->
+      <div class="form-group">
+        <label for="destination">What is your favorite destination?</label>
+        <input id="destination" name="destination" type="text" placeholder="e.g. Paris, Tokyo, New York" required>
+      </div>
+
+      <!-- Comments / Dream Destination -->
+      <div class="form-group">
+        <label for="comments">Comments / Dream Destination:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Tell us about your dream trip..."></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
